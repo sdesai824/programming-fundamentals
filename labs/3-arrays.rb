@@ -15,3 +15,10 @@
 # HINTS
 # Learn to read the documentation!
 # https://ruby-doc.org/core-2.7.0/Array.html
+
+my_list = ["milk", "eggs", "bacon", "beer"]
+friends_list = ["beer", "cookies", "apple"]
+ 
+combined_list = my_list.union(friends_list)
+combined_list = combined_list.sort
+puts "buy " + combined_list

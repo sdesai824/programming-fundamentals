@@ -8,7 +8,17 @@
 # screen.
 ranks = [2, 3, 4, 5, 6, 7, 8, 9, 10, "Jack", "Queen", "King", "Ace"]
 suits = ["Clubs", "Diamonds", "Hearts", "Spades"]
+card = []
 
+for ranks in ranks
+    i=0
+    for suit in suits
+        card.push("#{ranks} of #{suits[i]}")
+        i=i+1
+        #puts card
+    end
+end
+puts card
 # Sample output:
 # 2 of Clubs
 # 2 of Diamonds
@@ -16,6 +26,34 @@ suits = ["Clubs", "Diamonds", "Hearts", "Spades"]
 # 2 of Spades
 # 3 of Clubs
 # ...
+
+shuffled_deck = card.shuffle()
+player_1 = []
+player_2 = []
+player_3 = []
+player_4 = []
+
+x=0
+z=0
+until (x == 5)
+   player_1.push(shuffled_deck[z])
+   z=z+1
+   player_2.push(shuffled_deck[z])
+   z=z+1
+   player_3.push(shuffled_deck[z])
+   z=z+1
+   player_4.push(shuffled_deck[z])
+   z=z+1
+    x = x +1
+end
+puts "=============="
+puts player_1
+puts "=============="
+puts player_2
+puts "=============="
+puts player_3
+puts "=============="
+puts player_4
 
 # CHALLENGE
 # Deal a poker hand. Shuffle the deck and "deal" (i.e. display) a 5 card hand (i.e. 5 cards from the deck).
